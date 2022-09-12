@@ -19,6 +19,19 @@ import { SITE_TITLE } from '../config';
 		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
 		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
 	</nav>
+	<div style="padding: 25px;">
+		<h3>Important Information</h3>
+		<p><b>Client Address: </b>{Astro.clientAddress}</p>
+		<p><b>Generator: </b>{Astro.generator}</p>
+		<p><b>Params: </b>{JSON.stringify(Astro.params)}</p>
+		<p><b>Props: </b>{JSON.stringify(Astro.props)}</p>
+		<p><b>Request: </b>{JSON.stringify(Astro.request)}</p>
+		<p><b>Response: </b>{JSON.stringify(Astro.response)}</p>
+		<!-- <p><b>Self: </b>{Astro.self}</p> -->
+		<p><b>Site: </b>{Astro.site}</p>
+		<p><b>Slots: </b>{JSON.stringify(Astro.slots)}</p>
+		<p><b>URL: </b>{Astro.url}</p>
+	</div>
 </header>
 <style>
 	header {
