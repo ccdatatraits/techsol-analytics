@@ -1,6 +1,8 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
+
+const cookie = Astro.request.headers.get('cookie');
 ---
 
 <!-- Google Tag Manager (noscript) -->
@@ -19,8 +21,9 @@ import { SITE_TITLE } from '../config';
 		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
 		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
 	</nav>
-	<div client:load style="padding: 25px;">
+	<div style="padding: 25px;">
 		<h3>Important Information</h3>
+		<p><b>Cookie: </b>{cookie}</p>
 		<p><b>Client Address: </b>{Astro.clientAddress}</p>
 		<p><b>Generator: </b>{Astro.generator}</p>
 		<p><b>Params: </b>{JSON.stringify(Astro.params)}</p>
