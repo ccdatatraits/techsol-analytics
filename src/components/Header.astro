@@ -19,7 +19,7 @@ import { SITE_TITLE } from '../config';
 		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
 		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
 	</nav>
-	<div style="padding: 25px;">
+	<div client:load style="padding: 25px;">
 		<h3>Important Information</h3>
 		<p><b>Client Address: </b>{Astro.clientAddress}</p>
 		<p><b>Generator: </b>{Astro.generator}</p>
